@@ -45,9 +45,21 @@
         .tag-gourmet { background-color: #7209b7; color: white; }
         .tag-popular { background-color: #f77f00; color: white; }
         .tag-picante { background-color: #d00000; color: white; }
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+            filter: grayscale(100%);
+        }
     </style>
 </head>
-<body>
+<body class="relative">
+    <img src="assets/logo.png" alt="Watermark" class="watermark">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white shadow-md">
