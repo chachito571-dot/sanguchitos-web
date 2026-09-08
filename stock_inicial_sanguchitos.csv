@@ -1,0 +1,21 @@
+SÍNTESIS DE STOCK INICIAL (50 Unidades por Sabor);;;;;
+;;;;;
+ITEM;CANTIDAD TOTAL;UNIDAD;PRECIO UNITARIO;COSTO TOTAL;PROVEEDOR SUGERIDO
+Pan;150;unidad;400;60000;Panadería Local
+Jamón Cocido;3;kg;17000;51000;Limay Mayorista / Todo Fiambres
+Queso Tybo;2;kg;10300;20600;Todo Fiambres (Potreritos)
+Mayonesa;1;kg;10000;10000;Distribuidora General
+Queso Brie;2;kg;40200;80400;Todo Fiambres (Fruit de Lait)
+Rúcula/Tomate/Pesto;50;porción;800;40000;Mercado Central / Local
+Pepperoni;2.5;kg;20300;50750;Todo Fiambres / Limay
+Queso Mozzarella;2.5;kg;11500;28750;Todo Fiambres (Aurora/La Paulina)
+Jalapeños/Salsa;50;porción;400;20000;Distribuidora Especializada
+;;;;;
+INVERSIÓN TOTAL MATERIA PRIMA;;;;$361500;
+;;;;;
+PROYECCIÓN DE VENTAS (50 x 3 Sabores);;;;;
+SÁNDWICH;CANTIDAD;PRECIO VENTA;INGRESO TOTAL;COSTO TOTAL;GANANCIA NETA
+El Infaltable;50;4200;210000;101600;108400
+Delicia Gourmet;50;4500;225000;140400;84600
+Explosión Picante;50;3800;190000;119500;70500
+TOTALES;150;;625000;361500;263500

@@ -1,0 +1,17 @@
+Sándwich;Ingrediente;Cantidad;Precio Unitario (KG/Un);Costo Ingrediente;Proveedor/Mayorista
+El Infaltable;Pan;1 unidad;400;400;Panadería Local
+El Infaltable;Jamón Cocido;0.06 kg;17000;1020;Limay Mayorista / Todo Fiambres
+El Infaltable;Queso Tybo;0.04 kg;10300;412;Todo Fiambres (Potreritos)
+El Infaltable;Mayonesa;0.02 kg;10000;200;Distribuidora General
+Delicia Gourmet;Pan;1 unidad;400;400;Panadería Local
+Delicia Gourmet;Queso Brie;0.04 kg;40200;1608;Todo Fiambres (Fruit de Lait)
+Delicia Gourmet;Rúcula/Tomate/Pesto;1 porción;800;800;Mercado Central / Local
+Explosión Picante;Pan;1 unidad;400;400;Panadería Local
+Explosión Picante;Pepperoni;0.05 kg;20300;1015;Todo Fiambres / Limay
+Explosión Picante;Queso Mozzarella;0.05 kg;11500;575;Todo Fiambres (Aurora/La Paulina)
+Explosión Picante;Jalapeños/Salsa;1 porción;400;400;Distribuidora Especializada
+;;;;;
+Resumen Rentabilidad;Costo Total;Precio Venta;Margen Ganancia (%);Ganancia Neta;
+El Infaltable;2032;4200;51.6%;2168;
+Delicia Gourmet;2808;4500;37.6%;1692;
+Explosión Picante;2390;3800;37.1%;1410;
