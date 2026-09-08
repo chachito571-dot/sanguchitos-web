@@ -46,15 +46,16 @@
         .tag-gourmet { background-color: #7209b7; color: white; }
         .tag-popular { background-color: #f77f00; color: white; }
         .tag-picante { background-color: #d00000; color: white; }
+
         .watermark {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70%;
+            width: 60%;
             opacity: 0.1;
             pointer-events: none;
-            z-index: -1;
+            z-index: 0;
         }
         @keyframes float {
             0% { transform: translateY(0px) rotate(3deg); }
@@ -67,6 +68,7 @@
     </style>
 </head>
 <body class="relative">
+    <!-- Logo Watermark -->
     <img src="assets/logo.png" alt="Watermark" class="watermark">
 
     <!-- Navigation -->
@@ -108,7 +110,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 relative">
-                <img src="assets/unnamed.jpg" alt="Delicious Sandwich" class="rounded-3xl shadow-2xl relative z-10 rotate-3 hover:rotate-0 transition duration-500 float-animation" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1553909487-a595C1f37607?auto=format&fit=crop&w=800&q=80" alt="Delicious Sandwich" class="rounded-3xl shadow-2xl relative z-10 rotate-3 hover:rotate-0 transition duration-500 float-animation" data-aos="fade-left">
                 <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary rounded-full opacity-20 blur-3xl"></div>
                 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary rounded-full opacity-20 blur-3xl"></div>
             </div>
@@ -143,7 +145,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Menu Section -->
     <section id="menu" class="py-20">
@@ -221,7 +222,7 @@
     <section id="nosotros" class="py-20 bg-trust text-white">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2" data-aos="fade-right">
-                <img src="assets/unnamed.jpg" alt="Our kitchen" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1550507992-eb63f7a68f60?auto=format&fit=crop&w=800&q=80" alt="Our kitchen" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition duration-500">
             </div>
             <div class="md:w-1/2" data-aos="fade-left">
                 <h2 class="text-4xl font-extrabold mb-6">Más que Sándwiches, <br><span class="text-secondary">Creamos Momentos</span></h2>
@@ -251,7 +252,6 @@
         </div>
     </section>
 
-
     <!-- Contact/WhatsApp Section -->
     <section id="contacto" class="py-20 bg-bg-cream">
         <div class="container mx-auto px-6 text-center">
@@ -279,7 +279,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="py-12 bg-trust text-white border-t border-blue-900">
