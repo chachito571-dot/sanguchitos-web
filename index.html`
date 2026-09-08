@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanguchitos - Sabor que Genera Confianza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E63946;
+            --secondary: #FFD166;
+            --trust: #1D3557;
+            --fresh: #2A9D8F;
+            --bg-cream: #FFF9F2;
+            --text-dark: #2D251E;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+        }
+        h1, h2, h3, .font-brand {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .text-secondary { color: var(--secondary); }
+        .bg-trust { background-color: var(--trust); }
+        .text-trust { color: var(--trust); }
+        .bg-fresh { background-color: var(--fresh); }
+        .text-fresh { color: var(--fresh); }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--trust) 0%, #457B9D 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tag-estrella { background-color: #e63946; color: white; }
+        .tag-nuevo { background-color: #2a9d8f; color: white; }
+        .tag-gourmet { background-color: #7209b7; color: white; }
+        .tag-popular { background-color: #f77f00; color: white; }
+        .tag-picante { background-color: #d00000; color: white; }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 0;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(3deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(3deg); }
+        }
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Logo Watermark -->
+    <img src="assets/logo.png" alt="Watermark" class="watermark">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/logo.png" alt="Sanguchitos Logo" class="h-12 w-auto mr-3">
+                <span class="text-2xl font-brand font-extrabold text-trust">Sanguchitos</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold">
+                <a href="#inicio" class="hover:text-primary transition">Inicio</a>
+                <a href="#menu" class="hover:text-primary transition">Menú</a>
+                <a href="#nosotros" class="hover:text-primary transition">Nosotros</a>
+                <a href="#contacto" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-red-700 transition">Pedir Ahora</a>
+            </div>
+            <div class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-24 pb-12 md:pt-32 md:pb-20 hero-gradient text-white overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 z-10" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Sabor que <span class="text-secondary">Enamora</span>, <br>Calidad que <span class="text-secondary">Convence</span>
+                </h1>
+                <p class="text-lg mb-8 opacity-90 max-w-lg">
+                    Descubre la perfección en cada bocado. Ingredientes seleccionados, recetas artesanales y la pasión por el sándwich perfecto.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#menu" class="bg-secondary text-trust px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition transform shadow-lg">
+                        Ver Menú <i class="fa-solid fa-utensils ml-2"></i>
+                    </a>
+                    <a href="#contacto" class="bg-white text-trust px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform shadow-lg">
+                        Contáctanos <i class="fa-solid fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1553909487-a595C1f37607?auto=format&fit=crop&w=800&q=80" alt="Delicious Sandwich" class="rounded-3xl shadow-2xl relative z-10 rotate-3 hover:rotate-0 transition duration-500 float-animation" data-aos="fade-left">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary rounded-full opacity-20 blur-3xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary rounded-full opacity-20 blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center p-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-fresh text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">100% Fresco</h3>
+                    <p class="text-gray-600">Ingredientes locales seleccionados cada mañana.</p>
+                </div>
+                <div class="flex flex-col items-center p-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-trust text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Calidad Garantizada</h3>
+                    <p class="text-gray-600">Estándares rigurosos de higiene y sabor en cada pieza.</p>
+                </div>
+                <div class="flex flex-col items-center p-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hecho con Amor</h3>
+                    <p class="text-gray-600">Recetas familiares que transmiten confianza y calidez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-trust">Nuestro Menú <span class="text-primary">Irresistible</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Desde los clásicos que nunca fallan hasta creaciones gourmet para paladares exigentes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 card-hover transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1539252554763-776887722747?auto=format&fit=crop&w=800&q=80" alt="Sanguchito Clásico" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold tag-popular">POPULAR</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-trust">El Infaltable</h3>
+                            <span class="text-xl font-extrabold text-primary">$4.200</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Jamón cocido de primera calidad, abundante queso tybo y la mayonesa exacta. El balance perfecto.
+                        </p>
+                        <button class="w-full py-3 rounded-xl bg-trust text-white font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar al pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 card-hover transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509724450022-377464793550?auto=format&fit=crop&w=800&q=80" alt="Sanguchito Gourmet" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold tag-gourmet">GOURMET</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-trust">Delicia Gourmet</h3>
+                            <span class="text-xl font-extrabold text-primary">$4.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Queso brie fundido, rúcula fresca, tomates secos y un toque de pesto artesanal. Una experiencia única.
+                        </p>
+                        <button class="w-full py-3 rounded-xl bg-trust text-white font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar al pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 card-hover transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553909487-a595C1f37607?auto=format&fit=crop&w=800&q=80" alt="Sanguchito Picante" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold tag-picante">PICANTE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-trust">Explosión Picante</h3>
+                            <span class="text-xl font-extrabold text-primary">$3.800</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Pepperoni, jalapeños, queso mozzarella fundido y nuestra salsa secreta picante. Solo para valientes.
+                        </p>
+                        <button class="w-full py-3 rounded-xl bg-trust text-white font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar al pedido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-trust text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1550507992-eb63f7a68f60?auto=format&fit=crop&w=800&q=80" alt="Our kitchen" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition duration-500">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h2 class="text-4xl font-extrabold mb-6">Más que Sándwiches, <br><span class="text-secondary">Creamos Momentos</span></h2>
+                <p class="text-lg opacity-80 mb-6 leading-relaxed">
+                    En <strong>Sanguchitos</strong>, creemos que la comida es la mejor forma de conectar personas. Por eso, nos obsesionamos con la calidad de cada ingrediente y la honestidad de nuestro sabor.
+                </p>
+                <p class="text-lg opacity-80 mb-8 leading-relaxed">
+                    Desde nuestra cocina hasta tu mesa, mantenemos un compromiso innegociable con la frescura y la higiene, asegurando que cada bocado te brinde la seguridad y el placer que mereces.
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-secondary">100%</span>
+                        <span class="text-sm opacity-70">Artesanal</span>
+                    </div>
+                    <div class="w-px h-10 bg-white opacity-30"></div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-secondary">10k+</span>
+                        <span class="text-sm opacity-70">Clientes Felices</span>
+                    </div>
+                    <div class="w-px h-10 bg-white opacity-30"></div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-secondary">5★</span>
+                        <span class="text-sm opacity-70">Calificación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/WhatsApp Section -->
+    <section id="contacto" class="py-20 bg-bg-cream">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-12 border-t-8 border-primary" data-aos="zoom-in-up">
+                <h2 class="text-4xl font-extrabold mb-6 text-trust">¿Tienes Hambre?</h2>
+                <p class="text-xl text-gray-600 mb-10">Estamos listos para preparar tu pedido. ¡Hazlo ahora y recíbelo caliente!</p>
+                <a href="https://wa.me/123456789" target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#25d366] text-white px-10 py-5 rounded-full font-bold text-2xl hover:bg-[#1ebd56] transition transform hover:scale-105 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                    Pedir por WhatsApp
+                </a>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <i class="fa-solid fa-location-dot text-primary"></i>
+                        <span>Av. Principal #123, Ciudad</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <i class="fa-solid fa-phone text-primary"></i>
+                        <span>+123 456 7890</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <i class="fa-solid fa-clock text-primary"></i>
+                        <span>Lun - Sáb: 11am - 10pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-trust text-white border-t border-blue-900">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-8">
+                <img src="assets/logo.png" alt="Logo" class="h-10 w-auto mr-3 brightness-0 invert">
+                <span class="text-xl font-brand font-bold">Sanguchitos</span>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p class="opacity-50 text-sm">&copy; 2026 Sanguchitos. Todos los derechos reservados. Diseñado para deleitar.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+</html>
